@@ -45,20 +45,24 @@ function App() {
 
 export default App;
 
-//  4. Discussion- Building Reusable Components
+ 
 
 
-// problem is component is less reusable because they rely on store existence to   function
+//  Introduction - Overview - Project
 
-//  in constast  passsing props makes our comopnet more self contains and resuable 
-// because they don't rely on esternal data source
-//  in our case it's highly unlikely we are going to reuse component with differnt kind of data sets
 
-// example genreList always want to know selectedGenre in store
+/// we have covered a wide range of topics 
 
-// if situration changes we can always modify these components and pass data through  props 
+// setting up routes 
+// handlling errors 
+// navigating between pages 
+// dynamic routes 
+// nested routes 
+// Private routes
 
-//  there is no-one-size-fit rule for managing state in react
 
-//  so we should first look for specific need of our project and chose approach fits 
-// those needs
+
+//  now it's time to apply to what we have laerned in gamehub
+
+// next few tutorial's we gonna impliment routing in this project
+// and build the page for viewing the game details
