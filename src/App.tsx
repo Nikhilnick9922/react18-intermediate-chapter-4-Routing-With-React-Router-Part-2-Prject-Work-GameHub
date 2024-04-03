@@ -1,68 +1,82 @@
-import { Box, Flex, Grid, GridItem, Show } from "@chakra-ui/react";
-import GameGrid from "./components/GameGrid";
-import GameHeading from "./components/GameHeading";
-import GenreList from "./components/GenreList";
-import NavBar from "./components/NavBar";
-import PlatformSelector from "./components/PlatformSelector";
-import SortSelector from "./components/SortSelector";
 
-function App() {
-  return (
-    <Grid
-      templateAreas={{
-        base: `"nav" "main"`,
-        lg: `"nav nav" "aside main"`,
-      }}
-      templateColumns={{
-        base: "1fr",
-        lg: "250px 1fr",
-      }}
-    >
-      <GridItem area="nav">
-        <NavBar />
-      </GridItem>
-      <Show above="lg">
-        <GridItem area="aside" paddingX={5}>
-          <GenreList />
-        </GridItem>
-      </Show>
+// function App() {
+//   return (
 
-      <GridItem area="main">
-        <Box paddingLeft={2}>
-          <GameHeading />
-          <Flex marginBottom={5}>
-            <Box marginRight={5}>
-              <PlatformSelector />
-            </Box>
-            <SortSelector />
-          </Flex>
-        </Box>
-        <GameGrid />
-      </GridItem>
-    </Grid>
-  );
-}
 
-export default App;
+
+
+
+    // <Grid
+    //   templateAreas={{
+    //     // base: `"nav" "main"`,
+    //     // lg: `"nav nav" "aside main"`,
+    //     base: `"main"`,
+    //     lg: `"aside main"`,
+    //   }}
+    //   templateColumns={{
+    //     base: "1fr",
+    //     lg: "250px 1fr",
+    //   }}
+    // >
+    //   {/* <GridItem area="nav">
+    //     <NavBar />
+    //   </GridItem> */}
+    //   <Show above="lg">
+    //     <GridItem area="aside" paddingX={5}>
+    //       <GenreList />
+    //     </GridItem>
+    //   </Show>
+
+    //   <GridItem area="main">
+    //     <Box paddingLeft={2}>
+    //       <GameHeading />
+    //       <Flex marginBottom={5}>
+    //         <Box marginRight={5}>
+    //           <PlatformSelector />
+    //         </Box>
+    //         <SortSelector />
+    //       </Flex>
+    //     </Box>
+    //     <GameGrid />
+    //   </GridItem>
+    // </Grid>
+//   );
+// }
+
+// export default App;
 
  
 
 
-//  Introduction - Overview - Project
+//  2. Exercise- Setting Up Routing
 
 
-/// we have covered a wide range of topics 
+//  back to GameHub , we want to set up routing in this project
 
-// setting up routes 
-// handlling errors 
-// navigating between pages 
-// dynamic routes 
-// nested routes 
-// Private routes
+//  In which we have list of games exactly like before , but if we hit `games/1' 
+// we see GameDetailPage compnonet, nothing in this component now 
+
+// first we just wanted to setup basic routing in this project
+//  note that on the top we always have  our navigation bar and below we have outlet for 
+// display the page based on the current location in the browser.
+
+//  npm i react-router-dom@6.10.0
+// src -> pages -> Layout.tsx
+//  this is where we do specify all the pages should have nativation bar on the top
 
 
 
-//  now it's time to apply to what we have laerned in gamehub
 
-// next few tutorial's we gonna impliment routing in this project
-// and build the page for viewing the game details
+
+
+
+// send here by Homepage.tsx
+
+
+
+// in app component we have grid with two rows
+//  first row we have nav & main area
+// now we have layout with nav so now  we don't need 2 rows 
+// we only need grid &  2 columns , so remove nav
+//  & also remove the Navbar , so remove entire GridItem
+// and move this grid to Homepage.tsx 
