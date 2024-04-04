@@ -9,6 +9,8 @@ const apiClient = new APIClient<Game>("/games");
 export interface Game {
   id: number;
   name: string;
+  slug : string ;      // here
+  description_raw : string;  // here
   background_image: string;
   parent_platforms: { platform: Platform }[];
   metacritic: number;
@@ -35,9 +37,12 @@ const useGames = () => {
     staleTime: ms("24h"), // 24 hours here
   });
 };
-// move the useInfiteQuery to block
+ 
 
 export default useGames;
 
-//  now look at here this is entirely dependency  on entire gameQuery so any vlaue of
-// of the gamequery changes we want refetch the games from the backend
+ 
+
+//  and here we add 'slug' in interface and back to  GameCard.tsx and test the implimentation
+
+// descirption_raw added here and back to gameDetailPage.tsx

@@ -30,24 +30,22 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 
  
 
-//  3. Handling Errors
+//  4. Exercise- Fetching a Game
+
+//  we want to hover effect on our card
+//  and now we have to add name of game to see details - in that page we just want to see
+// name of the game and some description 
+// and note that in naviation bar , we are passing the slug of the game not the id 
+// this will make us url more url & search engine friendly
+// look at rawg documentation -> games  -> get details of the game  , here we have endpoint 
+// for getting details by just passing id or slug to get detials, 
+// so in object that we are recieving we have property called `descirption` that has html markup
+// but there is `description_raw `which contain text , which is not mentioned in documentation
+
+// this is little bit complicated than previous excercises
 
 
-//  if we go to invalid page  , we should see error page 
-// but message that we see on error page should be depend on the type of the error.
 
-// example 
-//        OOps 
-//      this page is does not exist 
+//  solution 
 
-//  this is for invalid page
-
-
-//  but if our application throws an error then we have to show different error , 
-// sorry unexpected error occured
-
-
-// solution 
-
-// first we need to create the error page 
-//  pages -> ErrorPage.tsx -> rafce   -> Heading + text
+//  first go to routes.tsx and change id to slug

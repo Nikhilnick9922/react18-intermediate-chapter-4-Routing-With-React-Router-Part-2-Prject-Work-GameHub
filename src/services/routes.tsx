@@ -10,11 +10,11 @@ import ErrorPage from "../pages/ErrorPage";
 
 const router =  createBrowserRouter([
     {path : '/' ,
-    errorElement : <ErrorPage/>, // here added
+    errorElement : <ErrorPage/>,  
      element : <Layout/> , 
         children : [
             {index : true , element : <HomePage/>},
-            {path : 'games/:id', element : <GameDetailPage/>}
+            {path : 'games/:slug', element : <GameDetailPage/>}
         ]}
 ])
 
@@ -24,15 +24,12 @@ export default router
 
 
 
+ 
+//  changed from id to slug
 
-//   add errorElement Property at root route
+//  next go to gameCard.tsx
 
-//  now test , working but navigation bar is gone 
-// because errorPage does not following  the Layout that we defined erlier , 
-// it's been not rendered in outlet of Layout component , only the children will be rendered
-// insdie the outlet 
-//  there is way but it's little bit complicated , but for now we prefer to add Navbar in erorpage
-//  because it's unlikely that layout of our website is going to change in the future ,
-// so let's not over complicate things
 
-// got to ErrorPage.tsx and add Navbar
+//  as you can see path 'games'/:slug , if there is no slug then error page will kick in 
+// we can test this right away. 
+// we done here nothing just wanted to see , go back to GameDetialsPage.tsx
