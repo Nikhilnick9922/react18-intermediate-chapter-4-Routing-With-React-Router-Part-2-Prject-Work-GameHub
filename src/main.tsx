@@ -28,7 +28,16 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 
  
 
-//   5. Exercise- Refactoring Entities
+//   6. Exercise- Building Expandable Text
 
-//  in useGame.ts we have dependency to other hook file for getting definatio of Game interface
-//  let's refactor this code
+
+//  now we are goinng to impliment logic for summerise game description 
+// suppose if the logic is longer than 300 characters we gonna show `show more` button
+
+//  because ability to exapnd and collapse not specific to Game descritption , we should impliment 
+// its as reusable 
+
+//  components -> ExpandableText.tsx -> rafce
+
+
+// 1 : 17

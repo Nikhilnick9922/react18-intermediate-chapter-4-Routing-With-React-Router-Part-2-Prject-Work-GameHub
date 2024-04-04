@@ -22,5 +22,4 @@ import { Genre } from "../entities/Genre";
 export default useGenres;  
  
 
-
-//  moved the genre interface to entities folder
+ 
