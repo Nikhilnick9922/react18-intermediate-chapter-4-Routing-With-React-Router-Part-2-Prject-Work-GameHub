@@ -16,5 +16,4 @@ const Layout = () => {
 export default Layout
 
  
-
-//  wrap outlet inside box and add padding
+ 

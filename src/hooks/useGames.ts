@@ -1,21 +1,10 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 import ms from "ms";
 import APIClient, { FetchResponse } from "../services/api-client";
-import { Platform } from "./usePlatforms";
 import useGameQueryStore from "../store";
+import { Game } from "../entities/Game";
 
 const apiClient = new APIClient<Game>("/games");
-
-export interface Game {
-  id: number;
-  name: string;
-  slug : string ;      // here
-  description_raw : string;  // here
-  background_image: string;
-  parent_platforms: { platform: Platform }[];
-  metacritic: number;
-  rating_top: number;
-}
 
 const useGames = () => {
   const gameQuery = useGameQueryStore((s) => s.gameQuery);
@@ -43,6 +32,18 @@ export default useGames;
 
  
 
-//  and here we add 'slug' in interface and back to  GameCard.tsx and test the implimentation
+//  here we want to extract game interface  but we are not going to select and move code 
+// this will create a lot of break in 
+// so right click on game -> refactor -> move to a new file
+//  so it will move this to new file name Game in hooks , and there is no break ins 
 
-// descirption_raw added here and back to gameDetailPage.tsx
+//  now create new file src -> entities -> Game.ts
+
+// we should do the same with other entity interface
+
+// find genre Inteface and move it to entities 
+
+// and do same for platform interface  , there platform in node_modules don't select that obivoisly
+
+
+// for comfirmation that we have not brake any changes build 

@@ -21,9 +21,4 @@ const GameCardContainer = ({ children }: Props) => {
 export default GameCardContainer;
 
 
-
-// paste that in box
-// working but now let's add transition 
-
-
-//  so now let's go to GameDetailsPage.tsx and fetch the page with details
+ 
