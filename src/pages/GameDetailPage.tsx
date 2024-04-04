@@ -1,4 +1,3 @@
-import React from 'react'
 
 const GameDetailPage = () => {
   return (
@@ -10,7 +9,4 @@ export default GameDetailPage
 
 
 
-
-//  now in routes.tsx first setup the route
-
-// so go to routes.tsx 
+ 

@@ -8,8 +8,7 @@ import GameGrid from "../components/GameGrid"
 const HomePage = () => (
     <Grid
         templateAreas={{
-            // base: `"nav" "main"`,
-            // lg: `"nav nav" "aside main"`,
+ 
             base: `"main"`,
             lg: `"aside main"`,
         }}
@@ -18,9 +17,7 @@ const HomePage = () => (
             lg: "250px 1fr",
         }}
     >
-        {/* <GridItem area="nav">
-          <NavBar />
-        </GridItem> */}
+ 
         <Show above="lg">
             <GridItem area="aside" paddingX={5}>
                 <GenreList />
@@ -44,14 +41,4 @@ const HomePage = () => (
 
 export default HomePage
 
-
-//  this is very similar to app component
-
-// go to app.tsx
-
-//  have pasted Grid here after modification , and delete app.tsx , and also delete 
-// app.css
-
-
-//  now we should create a routes file so 
- // services -> routes.tsx
+ 

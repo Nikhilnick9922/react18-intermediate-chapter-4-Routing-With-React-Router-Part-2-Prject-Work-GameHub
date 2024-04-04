@@ -12,9 +12,4 @@ const Layout = () => {
 
 export default Layout
 
-
-//  here we add NavBar 
-
-//  next we need to create the homepage
-
-//  pages -> homepage.tsx
+ 
