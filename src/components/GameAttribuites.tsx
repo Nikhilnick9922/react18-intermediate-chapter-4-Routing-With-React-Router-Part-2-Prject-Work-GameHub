@@ -36,11 +36,4 @@ const GameAttribuites = ({game}: Props) => {
 export default GameAttribuites
 
 
-//  This component should take Game as Prop
-
-//  and move entire SimpleGRid to here
-
-// now this component encapsulte all game attribute and we can reuse this in other places
-// in application
-
-//  now go to GameDetailsPage.tsx
+ 
