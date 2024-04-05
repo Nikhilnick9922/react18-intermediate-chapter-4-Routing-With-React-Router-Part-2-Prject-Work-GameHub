@@ -28,16 +28,14 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 
  
 
-//   6. Exercise- Building Expandable Text
+//   7. Exercise- Building Game Attributes
 
+//  now we going to add Game Attributes , we have platforms metacores genres publisheers in 
+// GameDetailPage
+// notice that each section has some light grey heading followwed by some values
+//  and this pattern is reapeated few times here
+// and we have to make sure to impliment this patter in reusable comoponent
 
-//  now we are goinng to impliment logic for summerise game description 
-// suppose if the logic is longer than 300 characters we gonna show `show more` button
+// Solution 
 
-//  because ability to exapnd and collapse not specific to Game descritption , we should impliment 
-// its as reusable 
-
-//  components -> ExpandableText.tsx -> rafce
-
-
-// 1 : 17
+//  components => DefinitionItems.tsx -> rafce
