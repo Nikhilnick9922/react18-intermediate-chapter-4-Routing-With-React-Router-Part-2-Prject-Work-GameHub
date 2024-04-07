@@ -32,10 +32,4 @@ const SearchInput = (
 
 export default SearchInput;
 
-//  so here when we submit , all we donig is setting the searchText 
-// at this point the Games hook picks up the state change from zustant store and it will fetch the games from backend
  
-//  actaully it's working , but we don't see the results
-// to show the result's we shluld take the user back to the homepage because that's where we showing the reuslts 
-
-// so we use navigat hook and use navigate function to to take the user to home page

@@ -23,13 +23,10 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   </React.StrictMode>
 );
 
-//    11. Exercise- Fixing the NavBar
+// 12. Exercise- Refactoring Entities 
 
 
-// we have couple of problems in navbar 
+//  we have few entities , we are here exporting entities using Name while this is valid appraoch 
+// so it's common and recommened to use Default export when there is only single export in file
 
-// 1st is we can't able to click on the logo , on the click on the logo we should get back to homePage. 
-// 2nd is  if we search the game in GameDetailPage.tsx nothing happens
-
-
-//  go to Navbar.tsx 
+//  but before making any changes , we have to find impact of changes , so in entities -> game.ts

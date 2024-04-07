@@ -16,11 +16,4 @@ const NavBar = () => {
 
 export default NavBar;
 
-
-//  now wrap Logo inside the link
-
-//  after wrapping Logo image has lost it's aspect ratio  , to fix this in Image use object fit to cover
-
-
-//  now if we in GameDetailsPage.tsx and search for anything nothing happens
-//  let's find why , got to SearchInput.tsx 
+ 
