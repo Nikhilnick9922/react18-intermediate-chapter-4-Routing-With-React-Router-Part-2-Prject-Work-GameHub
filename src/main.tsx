@@ -23,22 +23,17 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   </React.StrictMode>
 );
 
-//   8. Exercise- Building Game Trailer
+//   9.   Exercise- Building Game Screenshots
 
-//  we gonna add game trailer in this , for this first read rawg api
-// we have endpoint to get all trailer of given game
-// so we can send request to endpiont /games /id /movies
-// and  we can get bunch of trailer object with id name preview & data properties
-// preview container url of image which poster of video  , unfortunately shape of data which is
-// object is not shown here
 
-//  so first we gonna fetch the traiilers then we gonna inspect the object in dev tool so that
-// we can get the idea , then we will see that in data object we have multiple properties each
-// containing video link file , different videos with different resolution which is not that
-// complicated
+//  on medium devices like tablet we want to show them like 2 columns 
+// and on small devices like on the phone we want to show them like single column
+//
 
-// solution
+//  this is similar to previous one 
+// we can find endpont in api documentation for given game for screenshot
+//  urls is `games/id/screenshots`
+// we get bunch of object , each object has id ,image , hidden , widhth and height properties
 
-//  we gonna encapsulate this feature in seperate component
-//  so components -> GameTrailer.tsx -> rafce
- 
+// let's start by creating the hook by gettign those screen shopts for the game 
+//  hooks -> useScreenshots.ts

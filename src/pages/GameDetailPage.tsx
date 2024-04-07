@@ -4,6 +4,7 @@ import ExpandableText from "../components/ExpandableText";
 import useGame from "../hooks/useGame";
 import GameAttribuites from "../components/GameAttribuites";
 import GameTrailer from "../components/GameTrailer";
+import GameScreenshots from "../components/GameScreenshots";
 
 const GameDetailPage = () => {
     const {slug} = useParams();
@@ -24,6 +25,7 @@ const GameDetailPage = () => {
   
     <GameAttribuites game={game} />
     <GameTrailer gameId={game.id} />
+    <GameScreenshots gameId={game.id}/>
     </>
   )
 }
@@ -31,6 +33,5 @@ const GameDetailPage = () => {
 export default GameDetailPage
 
 
-//   we want to render the single trailer , even though we have multiple trailer at backend
-//  so after running , we can see data propety in this we have - 2  key value , 480 and max
-// so go to Trailer.ts and redefine the data interface 
+ 
+//  later we come back for layout and make the page little pretty
