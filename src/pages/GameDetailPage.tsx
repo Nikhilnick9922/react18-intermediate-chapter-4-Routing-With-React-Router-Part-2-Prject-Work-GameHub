@@ -43,11 +43,4 @@ export default GameDetailPage
 
 
  
-//  instead of wrapping everything in fragment 
-// we gonna wrap them in simplegrid
-
-// for small devices we should have 1 column and medium devices we should have 2 columns
-
-//  and here we need container for each columns , box or GridItem
-// for first columns we  have Heading , text & attributes
-// for second we have Trailer & screenshots
+ 

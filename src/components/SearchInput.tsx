@@ -1,24 +1,26 @@
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import { useRef } from "react";
 import { BsSearch } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 import useGameQueryStore from "../store";
 
-// interface Props {
-//   onSearch: (searchText: string) => void;
-// }
+
+ 
 
 const SearchInput = (
-  // { onSearch }: Props
-  ) => {
+   ) => {
+  const navigate =   useNavigate()
   const ref = useRef<HTMLInputElement>(null);
-  // const {setSearchText}= useGameQueryStore()  ;  /// not the best ways
-   const setSearchText = useGameQueryStore(s=>s.setSearchText)
+    const setSearchText = useGameQueryStore(s=>s.setSearchText)
   return (
     <form onSubmit={(event) => {
       event.preventDefault();
       if (ref.current) 
-      // onSearch(ref.current.value);
-     setSearchText(ref.current.value);
+        {
+          setSearchText(ref.current.value);
+          navigate ('/')
+        }
+ 
     }}>
       <InputGroup>
         <InputLeftElement children={<BsSearch />} />
@@ -30,10 +32,10 @@ const SearchInput = (
 
 export default SearchInput;
 
-//  remove occrance of prop and interface for props 
+//  so here when we submit , all we donig is setting the searchText 
+// at this point the Games hook picks up the state change from zustant store and it will fetch the games from backend
+ 
+//  actaully it's working , but we don't see the results
+// to show the result's we shluld take the user back to the homepage because that's where we showing the reuslts 
 
-// const {setSearchText}= useGameQueryStore() 
-  // with this aproach any value in store changes will result in rerender of this comopent
-
-
-  // use selector , so if only searchText changes then only this reredners
+// so we use navigat hook and use navigate function to to take the user to home page

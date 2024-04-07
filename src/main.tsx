@@ -23,14 +23,13 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   </React.StrictMode>
 );
 
-//   10. Exercise- Improving the Layout 
-
-//  now we are done with the page , 
-// and last thing that we want to do is put everything in 2 colums
-
-// in left column we have game description & attributes and right column we have trailer & screen shots
-
-//  all this is for medium devices and for small everyting will be in single column
+//    11. Exercise- Fixing the NavBar
 
 
-//  so go to GameDetailsPage.tsx 
+// we have couple of problems in navbar 
+
+// 1st is we can't able to click on the logo , on the click on the logo we should get back to homePage. 
+// 2nd is  if we search the game in GameDetailPage.tsx nothing happens
+
+
+//  go to Navbar.tsx 
