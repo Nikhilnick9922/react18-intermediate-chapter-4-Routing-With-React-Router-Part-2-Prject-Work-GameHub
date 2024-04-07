@@ -23,17 +23,14 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   </React.StrictMode>
 );
 
-//   9.   Exercise- Building Game Screenshots
+//   10. Exercise- Improving the Layout 
+
+//  now we are done with the page , 
+// and last thing that we want to do is put everything in 2 colums
+
+// in left column we have game description & attributes and right column we have trailer & screen shots
+
+//  all this is for medium devices and for small everyting will be in single column
 
 
-//  on medium devices like tablet we want to show them like 2 columns 
-// and on small devices like on the phone we want to show them like single column
-//
-
-//  this is similar to previous one 
-// we can find endpont in api documentation for given game for screenshot
-//  urls is `games/id/screenshots`
-// we get bunch of object , each object has id ,image , hidden , widhth and height properties
-
-// let's start by creating the hook by gettign those screen shopts for the game 
-//  hooks -> useScreenshots.ts
+//  so go to GameDetailsPage.tsx 

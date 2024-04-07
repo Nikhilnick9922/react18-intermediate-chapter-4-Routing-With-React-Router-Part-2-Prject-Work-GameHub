@@ -22,9 +22,4 @@ const GameScreenshots = ({gameId}: Props) => {
 export default GameScreenshots
 
 
-//  if everyting is ok then we return Simplegrid with 2 columns
-//  coumns we use base 1 and medimum for 2 columns
-
-//  in simplegrid ,  and map each file in data to Image component defined in the chakra
-
-//  add some spacing = 2
+ 

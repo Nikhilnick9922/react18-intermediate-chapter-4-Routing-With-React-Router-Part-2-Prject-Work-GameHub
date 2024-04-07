@@ -15,8 +15,4 @@ const useScreenshots = (gameId : number) =>{
 
 export default useScreenshots;
 
-//  we need here screenshot interface so entities => Screenshot.ts
-
-//  this is almost identical to previous nothing new here
-
-//  now lets test this , first components => GameScreenshots.tsx -> rafce
+ 

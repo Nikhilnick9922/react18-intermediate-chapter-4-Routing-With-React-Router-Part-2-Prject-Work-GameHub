@@ -1,4 +1,4 @@
-import { Heading, Spinner } from "@chakra-ui/react";
+import { GridItem, Heading, SimpleGrid, Spinner } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import ExpandableText from "../components/ExpandableText";
 import useGame from "../hooks/useGame";
@@ -18,15 +18,24 @@ const GameDetailPage = () => {
 
   
   return (
-    <>
-    <Heading>{game.name}</Heading>
-     <ExpandableText>{game.description_raw}</ExpandableText>
+    <SimpleGrid columns={{base:1 , md: 2}} spacing={5}>
+  
+        <GridItem>
+            <Heading>{game.name}</Heading>
+            <ExpandableText>{game.description_raw}</ExpandableText>
+            <GameAttribuites game={game} />
+
+
+        </GridItem>
+
+      <GridItem>
+          <GameTrailer gameId={game.id} />
+          <GameScreenshots gameId={game.id}/>
+      </GridItem>    
 
   
-    <GameAttribuites game={game} />
-    <GameTrailer gameId={game.id} />
-    <GameScreenshots gameId={game.id}/>
-    </>
+ 
+    </SimpleGrid>
   )
 }
 
@@ -34,4 +43,11 @@ export default GameDetailPage
 
 
  
-//  later we come back for layout and make the page little pretty
+//  instead of wrapping everything in fragment 
+// we gonna wrap them in simplegrid
+
+// for small devices we should have 1 column and medium devices we should have 2 columns
+
+//  and here we need container for each columns , box or GridItem
+// for first columns we  have Heading , text & attributes
+// for second we have Trailer & screenshots
